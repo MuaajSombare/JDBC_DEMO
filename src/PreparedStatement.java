@@ -26,7 +26,8 @@ public class PreparedStatement {
             //preparing for sql query
 //            Statement statement =connection.createStatement();
             String query = "insert into students (id, name, age ,marks) values(?,?,?,?)";
-            java.sql.PreparedStatement pre = connection.prepareStatement(query);
+            java.sql.PreparedStatement pre = connection.prepareStatement(query);//here query will compile only once
+            //setting custome values for query
             pre.setInt(1,3);
             pre.setString(2,"muaaj");
             pre.setInt(3,34);
